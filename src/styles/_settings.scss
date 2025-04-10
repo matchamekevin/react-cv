@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-1 : 'Montserrat';
+$font-2 : 'Josefin Sans', serif;
+
+$color-1 : #252525;
+$color-2 : #FF7954;
+$color-3 : #33595E;
+$color-4 : #1AE9C7;
+$color-5 : #28809A;
+$color-6 : #D3E7E8;
+$color-7 : #43C6AC, #191654, #0B3B52;
+$color-8 : #3f4244, #a7aeb4, #3f4547;
+
+$white : #FFFFFF;
+$black : #000000;
+
+$borderRadius : 25px;
+$shadow : 0 1px 3px #333;
+$minHeigh : 95vh;
+
+@mixin verticalCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to right, $color-8);
+    margin: 1rem auto;
+    max-width: 1200px;
+    font-family: $font-1;
+    color: $black;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+    cursor: pointer;
+}
+
+a:visited {
+    color: $black;
+}
+
+.Accueil, .Savoir, .Portfolio, .Contact {
+    display: flex;
+
+    @media screen and (max-width: 850px) {
+        display: block !important;
+    }
+}
+
+.AccueilContent, .SavoirContent, .PortfolioContent, .ContactContent {
+    margin-left: .4rem;
+
+    @media screen and (max-width: 850px) {
+        margin-left: 0 !important;
+    }
+}
